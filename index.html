@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAT Safety Observation</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="header">
+  <img src="./Cat LOGO.jpg" alt="CAT Group Logo">
+</div>
+
+<div class="container">
+  <div class="card">
+
+    <h2>CAT CRPO-20 Site Safety Observation</h2>
+
+    <form id="form">
+
+      <div class="section-title">Observer Details</div>
+
+      <div class="form-group">
+        <label>Observer Name *</label>
+        <input name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Company</label>
+        <select name="company">
+          <option>Saudi Aramco</option>
+          <option>Contractor</option>
+          <option>Sub-Contractor</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" name="date">
+      </div>
+
+      <div class="section-title">Observation Details</div>
+
+      <div class="form-group">
+        <label>Classification</label>
+        <select name="classification">
+          <option>Unsafe Action</option>
+          <option>Unsafe Condition</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Location</label>
+        <select name="location">
+          <option>TCF</option><option>THRY-05</option><option>THRY-09</option>
+          <option>HZEM-06</option><option>LOOPLINE</option>
+          <option>MLIV-03S</option><option>MLIV-02S</option>
+          <option>STS2</option><option>STS3</option><option>STS4</option>
+          <option>HDD</option><option>MOV-JGP</option><option>PWRH</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select name="category">
+          <option>Work Permit</option>
+          <option>Isolation</option>
+          <option>Confined Space</option>
+          <option>Fall Protection</option>
+          <option>Road Safety</option>
+          <option>Excavation</option>
+          <option>PPE</option>
+          <option>Danger Zone (Line of Fire)</option>
+        </select>
+      </div>
+
+      <div class="section-title">Details</div>
+
+      <div class="form-group">
+        <label>Permit Stopped?</label>
+        <select name="permit_stop">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Positive Observation?</label>
+        <select name="positive">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Deviation / Violation</label>
+        <input name="deviation">
+      </div>
+
+      <div class="form-group">
+        <label>Description *</label>
+        <textarea name="description" required></textarea>
+      </div>
+
+      <!-- IMAGE UPLOAD -->
+      <div class="form-group">
+        <label>Photo Evidence</label>
+        <input type="file" id="photo" name="photo" accept="image/*" capture="environment">
+
+        <div id="preview-container">
+          <img id="preview">
+        </div>
+      </div>
+
+      <button type="submit">Submit Report</button>
+
+    </form>
+
+  </div>
+
+  <div class="footer">
+    © CAT Group KSA | Safety First
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
