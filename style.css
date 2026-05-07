@@ -29,12 +29,26 @@ body {
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* TITLE */
 h2 {
   text-align: center;
   color: #c40000;
+  margin-bottom: 10px;
 }
 
 /* SECTION */
@@ -53,33 +67,51 @@ h2 {
 
 label {
   font-size: 14px;
+  font-weight: 500;
 }
 
+/* INPUTS */
 input, select, textarea {
   width: 100%;
   padding: 12px;
   margin-top: 5px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  transition: 0.3s;
 }
 
+/* FOCUS EFFECT */
 input:focus, select:focus, textarea:focus {
   border-color: #c40000;
   box-shadow: 0 0 5px rgba(196,0,0,0.4);
+  outline: none;
 }
 
-/* IMAGE PREVIEW */
+/* HOVER EFFECT */
+input:hover, select:hover, textarea:hover {
+  border-color: #c40000;
+}
+
+/* MULTIPLE IMAGE PREVIEW */
 #preview-container {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 10px;
 }
 
-#preview {
-  width: 100%;
-  max-height: 250px;
+#preview-container img {
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 2px solid #c40000;
+  transition: 0.3s;
+}
+
+/* IMAGE HOVER */
+#preview-container img:hover {
+  transform: scale(1.05);
 }
 
 /* BUTTON */
@@ -92,10 +124,13 @@ button {
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
 }
 
 button:hover {
   background: black;
+  transform: scale(1.02);
 }
 
 /* FOOTER */
@@ -103,4 +138,16 @@ button:hover {
   text-align: center;
   color: #aaa;
   margin-top: 20px;
+  font-size: 13px;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:600px){
+  .card {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
 }

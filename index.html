@@ -22,11 +22,12 @@
 
     <form id="form">
 
+      <!-- OBSERVER DETAILS -->
       <div class="section-title">Observer Details</div>
 
       <div class="form-group">
         <label>Observer Name *</label>
-        <input name="name" required>
+        <input name="name" placeholder="Enter your name" required>
       </div>
 
       <div class="form-group">
@@ -43,6 +44,7 @@
         <input type="date" name="date">
       </div>
 
+      <!-- OBSERVATION DETAILS -->
       <div class="section-title">Observation Details</div>
 
       <div class="form-group">
@@ -78,6 +80,7 @@
         </select>
       </div>
 
+      <!-- DETAILS -->
       <div class="section-title">Details</div>
 
       <div class="form-group">
@@ -98,22 +101,29 @@
 
       <div class="form-group">
         <label>Deviation / Violation</label>
-        <input name="deviation">
+        <input name="deviation" placeholder="Enter deviation if any">
       </div>
 
       <div class="form-group">
         <label>Description *</label>
-        <textarea name="description" required></textarea>
+        <textarea name="description" placeholder="Enter observation details" required></textarea>
       </div>
 
-      <!-- IMAGE UPLOAD -->
+      <!-- MULTIPLE IMAGE UPLOAD -->
       <div class="form-group">
         <label>Photo Evidence</label>
-        <input type="file" id="photo" name="photo" accept="image/*" capture="environment">
 
-        <div id="preview-container">
-          <img id="preview">
-        </div>
+        <input 
+          type="file" 
+          id="photo" 
+          name="photo" 
+          accept="image/*" 
+          capture="environment" 
+          multiple
+        >
+
+        <!-- MULTIPLE IMAGE PREVIEW -->
+        <div id="preview-container"></div>
       </div>
 
       <button type="submit">Submit Report</button>
