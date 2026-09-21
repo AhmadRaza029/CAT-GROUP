@@ -20,8 +20,7 @@ This application replaces traditional Google Forms with a **professional, mobile
 
 ## 🖥️ Live Demo
 
-👉 *(Add your deployed link here)*
-Example: https://cat-safety-observation.netlify.app
+https://69fc8725c05ba935ccb535b1--cat-crpo-20-site-safety-observation.netlify.app/
 
 ---
 
